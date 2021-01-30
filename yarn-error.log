@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add enzyme-to-json@3.0.0-beta6 --dev
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add extract-text-webpack-plugin@3.0.0
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/mpho/Desktop/expensify-app1/node_modules/.bin/acorn'
+  Error: EACCES: permission denied, unlink '/Users/mpho/Desktop/expensify-app1/node_modules/.bin/ansi-html'
 
 npm manifest: 
   {
@@ -25,7 +25,8 @@ npm manifest:
     "license": "MIT",
     "scripts": {
       "serve": "live-server public/",
-      "build": "webpack",
+      "build:dev": "webpack",
+      "build:prod": "webpack -p --env production",
       "dev-server": "webpack-dev-server",
       "test": "jest --config=jest.config.json"
     },
