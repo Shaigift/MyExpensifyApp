@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add extract-text-webpack-plugin@3.0.0
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add express@4.15.4
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/mpho/Desktop/expensify-app1/node_modules/.bin/ansi-html'
+  Error: EACCES: permission denied, unlink '/Users/mpho/Desktop/expensify-app1/node_modules/.bin/acorn'
 
 npm manifest: 
   {
@@ -31,20 +31,24 @@ npm manifest:
       "test": "jest --config=jest.config.json"
     },
     "dependencies": {
+      "@babel/plugin-transform-react-constant-elements": "^7.12.1",
+      "@babel/plugin-transform-react-inline-elements": "^7.12.1",
+      "@babel/preset-env": "^7.12.11",
       "babel-cli": "6.24.1",
-      "babel-core": "6.25.0",
-      "babel-loader": "7.1.1",
       "babel-plugin-transform-class-properties": "6.24.1",
       "babel-plugin-transform-object-rest-spread": "6.23.0",
-      "babel-preset-env": "1.5.2",
+      "babel-plugin-transform-react-pure-class-to-function": "^1.0.1",
+      "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+      "babel-preset-env": "^1.5.2",
       "babel-preset-react": "6.24.1",
       "css-loader": "0.28.4",
       "enzyme": "2.9.1",
       "enzyme-to-json": "1.5.1",
+      "extract-text-webpack-plugin": "3.0.0",
       "jest": "20.0.4",
       "live-server": "^1.2.0",
       "moment": "2.18.1",
-      "node-sass": "4.5.3",
+      "node-sass": "^5.0.0",
       "normalize.css": "7.0.0",
       "react": "15.6.1",
       "react-addons-shallow-compare": "15.6.0",
@@ -61,6 +65,12 @@ npm manifest:
       "validator": "8.0.0",
       "webpack": "3.1.0",
       "webpack-dev-server": "2.5.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.10",
+      "@babel/preset-react": "^7.12.10",
+      "babel-core": "^7.0.0-bridge.0",
+      "babel-loader": "^7.1.5"
     }
   }
 
@@ -311,7 +321,7 @@ Lockfile:
     version "1.5.2"
     resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   
-  async@^2.1.2, async@^2.1.4, async@^2.1.5:
+  async@^2.1.2, async@^2.1.4, async@^2.1.5, async@^2.4.1:
     version "2.5.0"
     resolved "https://registry.yarnpkg.com/async/-/async-2.5.0.tgz#843190fd6b7357a0b9e1c956edddd5ec8462b54d"
     dependencies:
@@ -2134,6 +2144,15 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/extglob/-/extglob-0.3.2.tgz#2e18ff3d2f49ab2765cec9023f011daa8d8349a1"
     dependencies:
       is-extglob "^1.0.0"
+  
+  extract-text-webpack-plugin@3.0.0:
+    version "3.0.0"
+    resolved "https://registry.yarnpkg.com/extract-text-webpack-plugin/-/extract-text-webpack-plugin-3.0.0.tgz#90caa7907bc449f335005e3ac7532b41b00de612"
+    dependencies:
+      async "^2.4.1"
+      loader-utils "^1.1.0"
+      schema-utils "^0.3.0"
+      webpack-sources "^1.0.1"
   
   extsprintf@1.0.2:
     version "1.0.2"
